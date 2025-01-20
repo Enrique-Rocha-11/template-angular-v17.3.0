@@ -1,0 +1,41 @@
+:root {
+    --color-principal: #E30047;
+    --color-secundario: #704EFF;
+    --color-terciario: rgb(5, 30, 51);
+    --color-facebook: #2D77F2;
+    --color-discord: #5965F2;
+    --color-verde: #2DBA1C;
+    --color-dorado: #FFBA00;
+    --color-naranja: #FA8702;
+    --color-azul: #286A9D;
+    --warning: #E30047;
+    --borde-Input: #4B6983;
+
+    --color-turqueza: #40FDE6;
+    --color-input: #759EC1;
+    --color-azul-alterno: #7EC6FF;
+    --color-azul-alterno-dos: #1781DD;
+    // Hover
+    --color-secundario-hover: #3E24AA;
+    //
+    --color-claro: #fff;
+    --color-oscuro: #333;
+    --color-neutro: #818181;
+    --fondo-claro: #fff;
+    --fondo-oscuro: #000;
+    --fondo-alterno: #F7F7F7;
+    --fondo-azul: #042139;
+    --fondo-variacion: #092F4F;
+    // sombra
+    --sombra: 0px 3px 25px #56686F14;
+
+    --surface-color: #fff;
+    --curve: 40;
+    body {
+        &.dark {
+            --fondo-claro: #171C26;
+            --color-oscuro: #EEEEEE;
+            //--color-terciario: #3273ff;
+        }
+    }
+}

@@ -1,0 +1,193 @@
+@mixin Flexbox ( $justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: wrap;
+}
+
+@mixin Basico ( $ancho, $padding, $border) {
+    width: $ancho;
+    padding: $padding;
+    border: $border;
+}
+
+@mixin ObjAbsoluto ( $arriba, $derecha, $abajo, $izquierda) {
+    position: absolute;
+    top: $arriba;
+    right: $derecha;
+    bottom: $abajo;
+    left: $izquierda;
+}
+
+@mixin Posicion ( $position, $arriba, $derecha, $abajo, $izquierda) {
+    position: $position;
+    top: $arriba;
+    right: $derecha;
+    bottom: $abajo;
+    left: $izquierda;
+}
+
+@mixin Scroll {
+    width: 8px;
+    height: 0px !important;
+    cursor: pointer !important;
+}
+
+@mixin Scroll-Color {
+    background: rgba(128, 128, 128, .5);
+    border-radius: 5px;
+}
+
+@mixin sombraEfecto($left, $right, $spread, $size, $colorA, $colorB, $duration) {
+    &:after {
+        position: absolute;
+        content: "";
+        top: $right;
+        left: $left;
+        right: 0;
+        z-index: -3;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        transform: scale($size);
+        -webkit-filter: blur($spread);
+        -moz-filter: blur($spread);
+        -ms-filter: blur($spread);
+        filter: blur($spread);
+        background: linear-gradient(270deg, $colorA, $colorB);
+        background-size: 200% 200%;
+        animation: animarSombra $duration ease infinite;
+    }
+}
+
+@keyframes animarSombra {
+    0% {
+        background-position: 0% 50%
+    }
+    1% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Escala {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes Rebote {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 15px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes OpacidadArriba {
+    0% {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes OpacidadArribaLargo {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes OpacidadDerecha {
+    0% {
+        opacity: 0;
+        transform: translateX(-40%);
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes OpacidadIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(40%);
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes Opacidad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+//=========== Media Queries
+@mixin Responsive ($pantalla) {
+    @media screen and ( max-width: $pantalla) {
+        @content;
+    }
+}
+
+@mixin ResponsiveAltura ($altura) {
+    @media screen and ( max-height: $altura) {
+        @content;
+    }
+}
+
+@mixin ResponsiveMinimo ($minimo) {
+    @media screen and ( min-width: $minimo) {
+        @content;
+    }
+}
+
+@mixin ResponsiveGirar ($horizontal) {
+    @media screen and ( max-width: $horizontal) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin ResponsiveLargo ($horizontal, $vertical) {
+    @media screen and ( max-width: $horizontal) and (min-height: $vertical) {
+        @content;
+    }
+}

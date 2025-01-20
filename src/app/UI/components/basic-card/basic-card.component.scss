@@ -1,0 +1,68 @@
+@import "../../../../scss/mixins";
+  
+  
+  .glass-card {
+    position: relative;
+    max-width: 460px;
+    padding: 2rem;
+    border-radius: 20px;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.008) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    transition: transform 0.5s, box-shadow 0.5s;
+
+    @include Responsive(848px){
+      margin-top: 40px;
+    }
+
+    @include Responsive(480px){
+      max-width: 340px;
+      margin: auto;
+    }
+  }
+  
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    background: linear-gradient(
+      45deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.08) 100%
+    );
+  }
+  
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  
+  .card-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(var(--light), 0.9);
+
+    
+  }
+  
+  .card-content p {
+    
+    color: rgba(var(--light), 0.9);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .card-content p:last-child {
+    margin-bottom: 0;
+  }

@@ -1,0 +1,43 @@
+@import "../../../../scss/mixins";
+
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  min-height: 100%;
+
+  .text{
+    color: white;
+    width: 400px;
+
+    @include Responsive(848px){
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  
+    h2{
+      font-size: 90px;
+
+      @include Responsive(480px){
+        font-size: 50px;
+      }
+    }
+  
+    p{
+      font-size: 25px;
+
+      @include Responsive(480px){
+        font-size: 22px;
+      }
+    }
+  }
+
+  app-basic-card{
+    display: block;
+    width: 450px !important;
+  }
+}

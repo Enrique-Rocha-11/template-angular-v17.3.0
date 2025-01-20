@@ -1,0 +1,53 @@
+$color_principal:#EE3915;
+$color_secundario: #3961e6;
+$color_claro: #fff;
+//
+$color_claro: rgba(255, 255, 255, 08);
+//
+$oscuro: #000;
+$oscuro_overlay: rgba(0, 0, 0, 0.8);
+//
+$texto_neutro: #6e6c6c;
+$casi_oscuro: #333333;
+//
+$color_enlace_Activo: #007bff;
+$color_enlace_Activo_overlay: darken($color_enlace_Activo, 10%);
+//
+$color_peligroso: #dc3545;
+$color_peligroso_overlay: darken($color_peligroso, 10%);
+//
+$letra:("xxxl": 35px, "xxl": 26px, "xl":30px, "lg": 22px, "md": 20px, "sd": 18px, "sm":17px, "xs": 16px, "xxs": 14px, "iconoGrande": 50px, "iconoSmall": 20px, "superBig": 70px);
+//
+$color_alterno: rgb(0, 214, 143);
+$color_alterno_overlay: darken($color_alterno, 10%);
+//
+$gradient_logo: linear-gradient(to left, #25304C, rgb(0, 47, 77));
+$gradient_logo_invertido: linear-gradient(to right, #25304C, rgb(0, 47, 77));
+$font:'Raleway',
+sans-serif;
+$font-Logo: 'Ultra',
+serif;
+$tiempo_Trans: .3s;
+$border_radius: 25px;
+$boton-width: 175px;
+$boton-width-sm: 250px;
+$cont-width: 500px;
+$icono-aviso:100px;
+$icono-aviso-sm:70px;
+//
+$sombraF: drop-shadow( 5px 5px 5px);
+$sombra: 0 16px 26px -10px var(--color-secundario),
+0 4px 25px 0px var(--color-secundario);
+$sombra2: 0px 4px 16px;
+$sombra3: 0 10px 30px rgba(0, 0, 0, 0.2);
+$sombra4: 0 5px 25px rgba(0, 0, 0, 0.85);
+$sombra-st: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
+rgba(0, 0, 0, 0.14) 0px 2px 2px 0px;
+$transform_escala: scale(1.01);
+// Animaciones
+$escala: Escala 1s;
+$opacidad: Opacidad 1s;
+$opacidad_Arriba: OpacidadArriba 1s;
+$opacidad_Arriba_Largo: OpacidadArribaLargo 1s;
+$opacidad_Derecha: OpacidadDerecha .8s;
+$opacidad_Izquierda: OpacidadIzquierda .8s;
