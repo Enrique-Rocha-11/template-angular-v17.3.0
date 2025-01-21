@@ -37,6 +37,9 @@ jobs:
       - name: Build app bundle
         run: npm run build:prod
 
+      # Renombrar Html
+      - name: Rename index.html
+        run: mv dist/template/browser/index.html dist/template/browser/404.html
       # Deploy to github pages
       - name: deploy to Pages
         uses: crazy-max/ghaction-github-pages@v4.1.0
