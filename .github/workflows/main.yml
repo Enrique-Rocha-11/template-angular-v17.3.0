@@ -44,4 +44,6 @@ jobs:
         with:
           build_dir: dist/template/browser
         env: 
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+     
